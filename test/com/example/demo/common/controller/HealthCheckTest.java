@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.common.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +13,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @AutoConfigureTestDatabase
-public class PostCreateControllerTest {
+public class HealthCheckTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     void 헬스_체크_응답이_200으로_내려온다() throws Exception {
+        // Given
+        // When
+        // Then
         mockMvc.perform(get("/health_check.html")).andExpect(status().isOk());
     }
+
 }
